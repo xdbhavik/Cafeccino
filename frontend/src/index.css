@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 6%;
+    --foreground: 33 15% 93%;
+    --card: 0 0% 10%;
+    --card-foreground: 33 15% 93%;
+    --primary: 38 90% 55%;
+    --primary-foreground: 0 0% 6%;
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 33 15% 93%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 28 6% 57%;
+    --border: 0 0% 18%;
+    --input: 0 0% 14%;
+    --ring: 38 90% 55%;
+    --radius: 0.5rem;
+    
+    /* Global Theme Tokens */
+    --color-bg: #0F0F0F;
+    --color-surface: #1A1A1A;
+    --color-surface-raised: #242424;
+    --color-border: #2E2E2E;
+    --color-accent: #F5A623;
+    --color-accent-dim: #3D2B00;
+    --color-text-primary: #F0EDE8;
+    --color-text-secondary: #9A9590;
+    --color-success: #4CAF7D;
+    --color-danger: #E05C5C;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sora', sans-serif;
+    color: var(--color-text-primary);
+  }
+
+  .price, .amount, [data-type="price"] {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+  }
+
+  /* Custom input defaults to match design system */
+  input, select, textarea {
+    background-color: var(--color-surface-raised);
+    border: 1px solid var(--color-border);
+    border-radius: 6px; /* rounded-md */
+    color: var(--color-text-primary);
+  }
+
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 2px rgba(245, 166, 35, 0.2);
+  }
+}
+
+/* Custom modern scrollbar for card grids and sidebars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0F0F0F;
+}
+::-webkit-scrollbar-thumb {
+  background: #2E2E2E;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3D2B00;
+}
